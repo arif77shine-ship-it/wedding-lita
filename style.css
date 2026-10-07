@@ -1,0 +1,1173 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0c0c0c;
+    color: #f4f0e8;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --gold: #d6b56a;
+    --gold-light: #f0d99b;
+    --black: #0c0c0c;
+    --dark: #141414;
+    --white: #f4f0e8;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.container {
+
+    width: min(1100px, 90%);
+    margin: auto;
+
+}
+
+.section {
+
+    padding: 100px 0;
+    background: var(--black);
+
+    text-align: center;
+
+}
+
+.section h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+
+}
+
+.section-label {
+
+    color: var(--gold);
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+
+}
+
+.description {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 2;
+
+    font-size: 14px;
+
+    color: #ccc;
+
+}
+
+.ornament {
+
+    color: var(--gold);
+
+    font-size: 28px;
+
+    margin-top: 35px;
+
+}
+
+.gold-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 25px auto;
+
+}
+
+
+/* =====================================================
+   COVER
+===================================================== */
+
+.cover {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("assets/foto cover.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+
+}
+
+.cover.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+}
+
+.cover-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.82)
+        );
+
+}
+
+.cover-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
+
+    max-width: 700px;
+
+}
+
+.small-title {
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+    color: var(--gold-light);
+
+}
+
+.cover h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(60px, 12vw, 120px);
+
+    font-weight: 500;
+
+    line-height: .9;
+
+    margin: 30px 0;
+
+}
+
+.cover h1 span {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-size: .55em;
+
+    margin: 15px 0;
+
+}
+
+.cover-date {
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+}
+
+.cover-line {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 30px auto;
+
+}
+
+.guest {
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #ddd;
+
+}
+
+.open-button {
+
+    margin-top: 30px;
+
+    border: 1px solid var(--gold);
+
+    background: rgba(0,0,0,.4);
+
+    color: white;
+
+    padding: 15px 25px;
+
+    cursor: pointer;
+
+    letter-spacing: 2px;
+
+    transition: .4s;
+
+}
+
+.open-button:hover {
+
+    background: var(--gold);
+
+    color: black;
+
+}
+
+.open-button span {
+
+    color: var(--gold);
+
+    margin: 0 8px;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.hidden {
+
+    display: none;
+
+}
+
+
+/* =====================================================
+   HERO VIDEO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    height: 100vh;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.hero-video {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.8)
+        );
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 20px;
+
+}
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(65px, 11vw, 130px);
+
+    font-weight: 500;
+
+}
+
+.hero p {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+}
+
+.quote {
+
+    max-width: 500px;
+
+    margin: 40px auto 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px !important;
+
+    line-height: 1.7;
+
+    letter-spacing: 0 !important;
+
+}
+
+
+/* =====================================================
+   COUPLE
+===================================================== */
+
+.couple {
+
+    background: #111;
+
+}
+
+.couple-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    margin-top: 50px;
+
+}
+
+.person {
+
+    width: 280px;
+
+}
+
+.person-image {
+
+    width: 230px;
+
+    height: 330px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 50% 50% 0 0;
+
+    border: 1px solid rgba(214,181,106,.5);
+
+}
+
+.person-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.person h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: var(--gold);
+
+    font-size: 32px;
+
+    margin-top: 25px;
+
+}
+
+.person p {
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #bbb;
+
+    margin-top: 10px;
+
+}
+
+.and {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: var(--gold);
+
+    font-size: 65px;
+
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown-section {
+
+    padding: 100px 0;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.9),
+            rgba(0,0,0,.9)
+        ),
+        url("assets/foto cover.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.countdown-section h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 55px;
+
+    font-weight: 500;
+
+}
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 40px;
+
+}
+
+.count-box {
+
+    width: 90px;
+
+    padding: 20px 10px;
+
+    border: 1px solid rgba(214,181,106,.5);
+
+}
+
+.count-box span {
+
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 40px;
+
+    color: var(--gold);
+
+}
+
+.count-box small {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #bbb;
+
+}
+
+
+/* =====================================================
+   EVENT
+===================================================== */
+
+.event {
+
+    background: #101010;
+
+}
+
+.event-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+}
+
+.event-card {
+
+    border: 1px solid rgba(214,181,106,.3);
+
+    padding: 45px 30px;
+
+    background: rgba(255,255,255,.02);
+
+}
+
+.event-icon {
+
+    color: var(--gold);
+
+    font-size: 28px;
+
+}
+
+.event-card h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+    margin: 15px 0;
+
+}
+
+.event-line {
+
+    width: 50px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 20px auto;
+
+}
+
+.event-card p {
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #bbb;
+
+    margin: 7px 0;
+
+}
+
+.event-card strong {
+
+    color: var(--gold-light);
+
+    font-size: 13px;
+
+}
+
+.map-button-container {
+
+    margin-top: 40px;
+
+}
+
+.map-button,
+.rsvp-button {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border: 1px solid var(--gold);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition: .4s;
+
+}
+
+.map-button:hover,
+.rsvp-button:hover {
+
+    background: var(--gold);
+
+    color: #000;
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section {
+
+    background: #0d0d0d;
+
+}
+
+.gallery-description {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    margin-bottom: 45px;
+
+}
+
+
+/*
+    FOTO ASLI 1023 x 1537
+    = portrait ratio ± 2:3
+
+    Kita tidak menggunakan object-fit: cover
+    supaya foto tidak terpotong.
+*/
+
+.gallery {
+
+    width: min(900px, 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+.gallery-item {
+
+    overflow: hidden;
+
+    background: #111;
+
+}
+
+.gallery-item img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    transition: transform .7s ease;
+
+}
+
+.gallery-item:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =====================================================
+   STORY
+===================================================== */
+
+.story {
+
+    background: #121212;
+
+}
+
+.story-item {
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 35px 0;
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 30px;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+.story-number {
+
+    color: var(--gold);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 35px;
+
+}
+
+.story-item h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+}
+
+.story-item p {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================================
+   RSVP
+===================================================== */
+
+.rsvp {
+
+    background: #0c0c0c;
+
+}
+
+.rsvp-button {
+
+    margin-top: 30px;
+
+}
+
+
+/* =====================================================
+   CLOSING
+===================================================== */
+
+.closing {
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        url("assets/foto cover.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+.closing-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.7);
+
+}
+
+.closing-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.closing-content p {
+
+    font-size: 13px;
+
+    color: #ddd;
+
+    letter-spacing: 1px;
+
+}
+
+.closing-content h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: white;
+
+    font-size: clamp(60px, 10vw, 110px);
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 35px;
+
+    background: #080808;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 11px;
+
+}
+
+footer strong {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--gold);
+
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music-button {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--gold);
+
+    background: rgba(0,0,0,.75);
+
+    color: var(--gold);
+
+    z-index: 500;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .section {
+
+        padding: 75px 0;
+
+    }
+
+    .couple-container {
+
+        gap: 20px;
+
+    }
+
+    .person {
+
+        width: 45%;
+
+    }
+
+    .person-image {
+
+        width: 180px;
+
+        height: 270px;
+
+    }
+
+    .and {
+
+        font-size: 45px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .cover h1 {
+
+        font-size: 68px;
+
+    }
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 70px;
+
+    }
+
+    .hero-video {
+
+        object-position: center;
+
+    }
+
+    .couple-container {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    .person {
+
+        width: 100%;
+
+    }
+
+    .person-image {
+
+        width: 190px;
+
+        height: 285px;
+
+    }
+
+    .and {
+
+        font-size: 40px;
+
+        line-height: 1;
+
+    }
+
+    .countdown {
+
+        gap: 7px;
+
+    }
+
+    .count-box {
+
+        width: 72px;
+
+        padding: 15px 5px;
+
+    }
+
+    .count-box span {
+
+        font-size: 30px;
+
+    }
+
+    .count-box small {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .event-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /*
+       GALERI HP
+
+       Tetap 2 kolom karena semua foto portrait.
+    */
+
+    .gallery {
+
+        width: 94%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+    }
+
+    .gallery-item img {
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+    .story-item {
+
+        grid-template-columns: 50px 1fr;
+
+        gap: 15px;
+
+    }
+
+    .story-number {
+
+        font-size: 25px;
+
+    }
+
+    .story-item h3 {
+
+        font-size: 25px;
+
+    }
+
+}

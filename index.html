@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Undangan Pernikahan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     AUDIO
+===================================================== -->
+
+<audio id="music" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- =====================================================
+     COVER / OPENING
+===================================================== -->
+
+<section id="cover" class="cover">
+
+    <div class="cover-overlay"></div>
+
+    <div class="cover-content">
+
+        <p class="small-title">
+            THE WEDDING OF
+        </p>
+
+        <h1>
+            Andi
+            <span>&</span>
+            Sarah
+        </h1>
+
+        <p class="cover-date">
+            20 • 12 • 2026
+        </p>
+
+        <div class="cover-line"></div>
+
+        <p class="guest">
+            Kepada Yth.<br>
+            Bapak/Ibu/Saudara/i
+        </p>
+
+        <button id="openInvitation" class="open-button">
+            <span>✦</span>
+            BUKA UNDANGAN
+            <span>✦</span>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="mainContent" class="hidden">
+
+
+<!-- =====================================================
+     HERO VIDEO
+===================================================== -->
+
+<section class="hero">
+
+    <video
+        id="backgroundVideo"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto">
+
+        <source src="assets/wedding as hd.mp4" type="video/mp4">
+
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content reveal">
+
+        <p class="small-title">
+            THE WEDDING OF
+        </p>
+
+        <h1>
+            Andi & Sarah
+        </h1>
+
+        <p>
+            Minggu, 20 Desember 2026
+        </p>
+
+        <div class="gold-line"></div>
+
+        <p class="quote">
+            "Dan di antara tanda-tanda kekuasaan-Nya ialah
+            Dia menciptakan untukmu pasangan hidup..."
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="section intro">
+
+    <div class="container reveal">
+
+        <p class="section-label">
+            ASSALAMUALAIKUM
+        </p>
+
+        <h2>
+            Dengan penuh kebahagiaan
+        </h2>
+
+        <p class="description">
+
+            Dengan memohon rahmat dan ridho Allah SWT,
+            kami bermaksud mengundang Bapak/Ibu/Saudara/i
+            untuk hadir dalam acara pernikahan kami.
+
+        </p>
+
+        <div class="ornament">
+            ✦
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMPELAI
+===================================================== -->
+
+<section class="section couple">
+
+    <div class="container">
+
+        <p class="section-label reveal">
+            THE BRIDE & GROOM
+        </p>
+
+        <h2 class="reveal">
+            Mempelai
+        </h2>
+
+
+        <div class="couple-container">
+
+            <!-- PRIA -->
+
+            <div class="person reveal">
+
+                <div class="person-image">
+                    <img src="assets/mempelai pria.png" alt="Mempelai Pria">
+                </div>
+
+                <h3>
+                    Andi Pratama
+                </h3>
+
+                <p>
+                    Putra pertama dari<br>
+                    Bapak Nama Ayah & Ibu Nama Ibu
+                </p>
+
+            </div>
+
+
+            <div class="and reveal">
+                &
+            </div>
+
+
+            <!-- WANITA -->
+
+            <div class="person reveal">
+
+                <div class="person-image">
+                    <img src="assets/mempelai wanita.png" alt="Mempelai Wanita">
+                </div>
+
+                <h3>
+                    Sarah Aulia
+                </h3>
+
+                <p>
+                    Putri pertama dari<br>
+                    Bapak Nama Ayah & Ibu Nama Ibu
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section class="countdown-section">
+
+    <div class="container reveal">
+
+        <p class="section-label">
+            SAVE THE DATE
+        </p>
+
+        <h2>
+            Menuju Hari Bahagia
+        </h2>
+
+        <div class="countdown">
+
+            <div class="count-box">
+                <span id="days">00</span>
+                <small>Hari</small>
+            </div>
+
+            <div class="count-box">
+                <span id="hours">00</span>
+                <small>Jam</small>
+            </div>
+
+            <div class="count-box">
+                <span id="minutes">00</span>
+                <small>Menit</small>
+            </div>
+
+            <div class="count-box">
+                <span id="seconds">00</span>
+                <small>Detik</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACARA
+===================================================== -->
+
+<section class="section event">
+
+    <div class="container">
+
+        <p class="section-label reveal">
+            WEDDING EVENT
+        </p>
+
+        <h2 class="reveal">
+            Rangkaian Acara
+        </h2>
+
+
+        <div class="event-grid">
+
+
+            <!-- AKAD -->
+
+            <div class="event-card reveal">
+
+                <div class="event-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Akad Nikah
+                </h3>
+
+                <div class="event-line"></div>
+
+                <p>
+                    Minggu
+                </p>
+
+                <strong>
+                    20 Desember 2026
+                </strong>
+
+                <p>
+                    08.00 WIB – selesai
+                </p>
+
+                <p>
+                    Masjid Al-Ikhlas
+                    <br>
+                    Jakarta
+                </p>
+
+            </div>
+
+
+            <!-- RESEPSI -->
+
+            <div class="event-card reveal">
+
+                <div class="event-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Resepsi
+                </h3>
+
+                <div class="event-line"></div>
+
+                <p>
+                    Minggu
+                </p>
+
+                <strong>
+                    20 Desember 2026
+                </strong>
+
+                <p>
+                    11.00 – 14.00 WIB
+                </p>
+
+                <p>
+                    Gedung Pernikahan
+                    <br>
+                    Jakarta
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- GOOGLE MAPS -->
+
+        <div class="map-button-container reveal">
+
+            <a
+                href="https://maps.google.com/?q=Gedung+Pernikahan+Jakarta"
+                target="_blank"
+                class="map-button">
+
+                📍
+                BUKA LOKASI
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALERI
+===================================================== -->
+
+<section class="section gallery-section">
+
+    <div class="container">
+
+        <p class="section-label reveal">
+            OUR MOMENTS
+        </p>
+
+        <h2 class="reveal">
+            Galeri
+        </h2>
+
+        <p class="gallery-description reveal">
+            Beberapa momen indah yang kami abadikan
+            menuju hari bahagia.
+        </p>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item reveal">
+                <img
+                    src="assets/galeri 1.png"
+                    alt="Galeri 1">
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                    src="assets/galeri 2.png"
+                    alt="Galeri 2">
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                    src="assets/galeri 3.png"
+                    alt="Galeri 3">
+            </div>
+
+            <div class="gallery-item reveal">
+                <img
+                    src="assets/galeri 4.png"
+                    alt="Galeri 4">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOVE STORY
+===================================================== -->
+
+<section class="section story">
+
+    <div class="container">
+
+        <p class="section-label reveal">
+            OUR LOVE STORY
+        </p>
+
+        <h2 class="reveal">
+            Kisah Kami
+        </h2>
+
+
+        <div class="story-item reveal">
+
+            <div class="story-number">
+                01
+            </div>
+
+            <div>
+                <h3>
+                    Pertama Bertemu
+                </h3>
+
+                <p>
+                    Semua berawal dari sebuah pertemuan
+                    sederhana yang kemudian menjadi awal
+                    dari cerita panjang kami.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="story-item reveal">
+
+            <div class="story-number">
+                02
+            </div>
+
+            <div>
+                <h3>
+                    Mengenal Lebih Dekat
+                </h3>
+
+                <p>
+                    Seiring berjalannya waktu, kami mulai
+                    mengenal satu sama lain dan menemukan
+                    banyak kesamaan.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="story-item reveal">
+
+            <div class="story-number">
+                03
+            </div>
+
+            <div>
+                <h3>
+                    Menuju Pernikahan
+                </h3>
+
+                <p>
+                    Dengan restu keluarga dan keyakinan,
+                    kami memutuskan untuk melangkah
+                    bersama menuju kehidupan baru.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RSVP
+===================================================== -->
+
+<section class="section rsvp">
+
+    <div class="container reveal">
+
+        <p class="section-label">
+            RSVP
+        </p>
+
+        <h2>
+            Konfirmasi Kehadiran
+        </h2>
+
+        <p class="description">
+
+            Merupakan suatu kehormatan bagi kami
+            apabila Bapak/Ibu/Saudara/i berkenan
+            hadir dan memberikan doa restu.
+
+        </p>
+
+
+        <a
+            href="https://forms.google.com/"
+            target="_blank"
+            class="rsvp-button">
+
+            KONFIRMASI KEHADIRAN
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CLOSING
+===================================================== -->
+
+<section class="closing">
+
+    <div class="closing-overlay"></div>
+
+    <div class="closing-content reveal">
+
+        <p>
+            Terima kasih atas doa dan
+            perhatian yang diberikan.
+        </p>
+
+        <h2>
+            Andi & Sarah
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p>
+            20 • 12 • 2026
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        Made with ♥
+    </p>
+
+    <strong>
+        Andi & Sarah
+    </strong>
+
+</footer>
+
+
+</main>
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<button id="musicButton" class="music-button">
+
+    ♫
+
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
